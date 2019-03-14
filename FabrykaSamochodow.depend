@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1515794224 source:d:\fabrykasamochodow\fabryka.cpp
+	<iostream>
+	<iomanip>
+	"fabryka.h"
+	<fstream>
+	<iostream>
+	<cstdio>
+
+1516235360 source:d:\fabrykasamochodow\main.cpp
+	<iostream>
+	<iomanip>
+	<vector>
+	<cstdio>
+	"fabryka.h"
+	<conio.h>
+	<windows.h>
+	<unistd.h>
+
+1515435200 d:\fabrykasamochodow\fabryka.h
+	<iostream>
+	<vector>
+

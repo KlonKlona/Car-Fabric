@@ -1,0 +1,71 @@
+Stanowiska produkcji opon
+Liczba opon w pierwszym stanowisku: 0
+Liczba opon w drugim stanowisku: 0
+Liczba opon w trzecim stanowisku: 0
+Liczba opon w czwartym stanowisku: 0
+Stanowiska produkcji silnikow
+Liczba silnikow w pierwszym stanowisku: 0
+Liczba silnikow w drugim stanowisku: 0
+Stanowiska produkcji karoserii
+Liczba karoserii w pierwszym stanowisku: 0
+Liczba karoserii w drugim stanowisku: 0
+Stanowiska malowania karoserii
+Liczba pomalowanych karoserii w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z oponami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z silnikami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z silnikami i oponami w pierwszym stanowisku:0
+Kolejka karoserii w pierwszym stanowisku: 9
+Kolejka karoserii z oponami w pierwszym stanowisku: 7
+Kolejka karoserii z silnikami w pierwszym stanowisku: 7
+Kolejka karoserii z oponami i silnikami w pierwszym stanowisku: 7
+Liczba pomalowanych karoserii w drugim stanowisku: 0
+Liczba pomalowanych karoserii z oponami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z silnikami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z silnikami i oponami w drugim stanowisku:0
+Kolejka karoserii w drugim stanowisku: 9
+Kolejka karoserii z oponami w drugim stanowisku: 7
+Kolejka karoserii z silnikami w drugim stanowisku: 7
+Kolejka karoserii z oponami i silnikami w drugim stanowisku: 7
+Stanowiska montazu opon
+Liczba karoserii z oponami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z oponami w pierwszym stanowisku:0
+Liczba karoserii z oponami i silnikami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z oponami i silnikami w pierwszym stanowisku: 0
+Kolejka karoserii w pierwszym stanowisku: 10
+Kolejka pomalowanych karoserii w pierwszym stanowisku: 11
+Kolejka opon w pierwszym stanowisku: 2
+Kolejka karoserii z silnikami w pierwszym stanowisku: 10
+Kolejka pomalowanych karoserii z silnikami w pierwszym stanowisku: 67
+Liczba karoserii z oponami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z oponami w drugim stanowisku: 0
+Liczba karoserii z oponami i silnikami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z oponami i silnikami w drugim stanowisku: 0
+Kolejka karoserii w drugim stanowisku: 10
+Kolejka pomalowanych karoserii w drugim stanowisku: 11
+Kolejka opon w drugim stanowisku: 3
+Kolejka karoserii z silnikami w drugim stanowisku: 10
+Kolejka pomalowanych karoserii z silnikami w drugim stanowisku: 68
+Stanowiska montazu silnikow
+Liczba karoserii z silnikami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z silnikami w pierwszym stanowisku: 0
+Liczba karoserii z silnikami i oponami w pierwszym stanowisku: 0
+Liczba pomalowanych karoserii z oponami i silnikami w pierwszym stanowisku: 0
+Kolejka silnikow w pierwszym stanowisku: 1
+Kolejka karoserii w pierwszym stanowisku: 8
+Kolejka pomalowanych karoserii w pierwszym stanowisku: 11
+Kolejka karoserii z oponami w pierwszym stanowisku: 7
+Kolejka pomalowanych karoserii z oponami w pierwszym stanowisku: 7
+Liczba karoserii z silnikami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z silnikami w drugim stanowisku: 0
+Liczba karoserii z silnikami i oponami w drugim stanowisku: 0
+Liczba pomalowanych karoserii z oponami i silnikami w drugim stanowisku: 0
+Kolejka silnikow w drugim stanowisku: 1
+Kolejka karoserii w drugim stanowisku: 8
+Kolejka pomalowanych karoserii w drugim stanowisku: 10
+Kolejka karoserii z oponami w drugim stanowisku: 7
+Kolejka pomalowanych karoserii z oponami w drugim stanowisku: 7
+Stanowiska montazu elektroniki
+Liczba gotowych samochodow w stanowisku pierwszym: 109
+Kolejka samochodow w stanowisku pierwszym: 8
+Liczba gotowych samochodow w stanowisku drugim: 102
+Kolejka samochodow w stanowisku drugim: 8

@@ -1,0 +1,125 @@
+// Przyporządkowanie pinów do odpowiednich zmiennych
+const int pinPrzycisk = 2; // pin przycisku
+
+// piny silników
+const int pinKierunekL = 4;
+const int pinKierunekP = 7;
+const int pinPredkoscL = 5;
+const int pinPredkoscP = 6;
+
+// piny czujników
+const int pinCzuj0 = A5;
+const int pinCzuj1 = A3;
+const int pinCzuj2 = A2;
+const int pinCzuj3 = A1;
+const int pinCzuj4 = A0;
+
+
+// zmienne przetrzymujące stan pinów wejściowych
+int stanPrzycisku = 0, czuj0 = 0, czuj1 = 0,czuj2 = 0,czuj3 = 0,czuj4 = 0;
+
+bool start = 0;
+
+void setup() {
+
+Serial.begin(9600);
+
+// Ustawienie poszczególnych pinów na wejściowe/wyjściowe
+pinMode(pinPrzycisk, INPUT_PULLUP);
+pinMode(pinCzuj0, INPUT);
+pinMode(pinCzuj1, INPUT);
+pinMode(pinCzuj2, INPUT);
+pinMode(pinCzuj3, INPUT);
+pinMode(pinCzuj4, INPUT);
+pinMode(pinKierunekL, OUTPUT);
+pinMode(pinKierunekP, OUTPUT);
+pinMode(pinPredkoscL, OUTPUT);
+pinMode(pinPredkoscP, OUTPUT);
+
+// Ustawienie początkowej prędkości silników na 0
+analogWrite(pinPredkoscP, 0);
+analogWrite(pinPredkoscL, 0);
+
+}
+
+void loop() {
+
+  stanPrzycisku = digitalRead(pinPrzycisk); //odczytanie pinu przycisku
+
+  if (stanPrzycisku == LOW) {start = 1; delay(1000);} //w przypadku odczytu dotknięcia przycisku, robot po sekundzie startuje
+
+
+    // Odczyt czujników
+    czuj0 = analogRead(pinCzuj0);
+    czuj1 = analogRead(pinCzuj1);
+    czuj2 = analogRead(pinCzuj2);
+    czuj3 = analogRead(pinCzuj3);
+    czuj4 = analogRead(pinCzuj4);
+    Serial.println(czuj0);
+
+
+  if (start) {
+
+    // Ustawienie kierunku obrotu silników tak, aby robot jechał do przodu
+    digitalWrite(pinKierunekL, LOW);
+    digitalWrite(pinKierunekP, HIGH);
+
+    // Przypadek, gdy tylko czujnik środkowy wykrył kolor czarny
+    if (czuj3 > 500 && czuj1 <= 200 && czuj0 <= 200 && czuj2 <= 200 && czuj4 <= 200) {
+      analogWrite(pinPredkoscL, 140);
+      analogWrite(pinPredkoscP, 140);
+    }
+    // Przypadek, gdy czujnik srodkowy i srodkowy-prawy wykryły kolor czarny
+    else if (czuj3 > 500 && czuj2 > 500 && czuj0 <= 200 && czuj1 <= 200 && czuj4 <= 200) {
+      analogWrite(pinPredkoscL, 140);
+      analogWrite(pinPredkoscP, 110);
+    }
+    // Przypadek, gdy tylko czujnik srodkowy-prawy wykryl kolor czarny
+    else if (czuj3 <= 200 && czuj2 > 500 && czuj0 <= 200 && czuj1 <= 200 && czuj4 <= 200) {
+      analogWrite(pinPredkoscL, 140);
+      analogWrite(pinPredkoscP, 60);
+    }
+    // Przypadek, gdy czujnik srodkowy-prawy i prawy wykryły kolor czarny
+    else if (czuj3 < 200 && czuj2 > 500 && czuj0 <= 200 && czuj1 > 500 && czuj4 <= 200) {
+      analogWrite(pinPredkoscL, 140);
+      analogWrite(pinPredkoscP, 40);
+    }
+    // Przypadek, gdy czujnik tylko prawy wykrył kolor czarny
+    else if (czuj3 < 200 && czuj2 < 200 && czuj0 <= 200 && czuj1 > 500 && czuj4 <= 200) {
+      analogWrite(pinPredkoscL, 140);
+      analogWrite(pinPredkoscP, 0);
+    }
+    // Przypadek, gdy czujnik srodkowy i srodkowy-lewy wykryly kolor czarny
+    else if (czuj3 > 500 && czuj4 > 500 && czuj0 <= 200 && czuj1 <= 200 && czuj2 <= 200) {
+      analogWrite(pinPredkoscP, 140);
+      analogWrite(pinPredkoscL, 110);
+    }
+    // Przypadek, gdy tylko czujnik srodkowy-lewy wykryl kolor czarny
+    else if (czuj3 <= 200 && czuj4 > 500 && czuj0 <= 200 && czuj1 <= 200 && czuj2 <= 200) {
+      analogWrite(pinPredkoscP, 140);
+      analogWrite(pinPredkoscL, 60);
+    }
+    // Przypadek, gdy czujnik srodkowy-lewy i lewy wykryly kolor czarny
+    else if (czuj3 < 200 && czuj4 > 500 && czuj1 <= 200 && czuj0 > 500 && czuj2 <= 200) {
+      analogWrite(pinPredkoscP, 140);
+      analogWrite(pinPredkoscL, 40);
+    }
+    // Przypadek, gdy czujnik tylko czujnik lewy wykryl kolor czarny
+    else if (czuj3 < 200 && czuj2 < 200 && czuj1 <= 200 && czuj0 > 500 && czuj4 <= 200) {
+      analogWrite(pinPredkoscP, 140);
+      analogWrite(pinPredkoscL, 0);
+    }
+
+    // Odczytywanie stanu przycisku
+   stanPrzycisku = digitalRead(pinPrzycisk);
+
+    // W przypadku dotkniecia przycisku nastepuje wylaczenie robota
+    if (stanPrzycisku == LOW) {
+      start = 0;
+      analogWrite(pinPredkoscP, 0);
+      analogWrite(pinPredkoscL, 0);
+      delay(1000);
+    }
+  }
+
+}
